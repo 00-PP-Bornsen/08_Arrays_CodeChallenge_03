@@ -1,5 +1,5 @@
 
-/*** Mini-Challenge  */
+/*** Mini-Challenge  
 // Satzbau + Punktuation
 
 // Vereinbarung:
@@ -28,6 +28,37 @@ function getSentence(arr,op) {
 
 // Modul: Ausgabe in Konsole : Test
 // output("hi"); 
+// function output(outputData) {
+//     console.log(outputData);
+// }*/
+
+// Modul: Ausgabe in Konsole : Test
+// Modul: Ausgabe in Konsole : Test
+// Modul: Ausgabe in Konsole : Test
 function output(outputData) {
     console.log(outputData);
 }
+
+function getSentence(arr, op) {
+    let sentence = arr.join(" "); // Die Array-Elemente zu einem Satz mit Leerzeichen verbinden.
+    let punctuation;
+
+    // Die Satzzeichen basierend auf der gewählten Operation (op) bestimmen.
+    switch (op) {
+        case "S":
+            punctuation = ".";
+            break;
+        case "Q":
+            punctuation = "?";
+            break;
+        case "E":
+            punctuation = "!";
+            break;
+        default:
+            punctuation = "."; // Standardmäßig einen Punkt verwenden, wenn die Operation nicht erkannt wird.
+            break;
+    }
+
+    return sentence + punctuation; // Den Satz mit dem entsprechenden Satzzeichen kombinieren.
+}
+
